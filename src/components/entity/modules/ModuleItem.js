@@ -21,6 +21,15 @@ const ModuleItem = ({module,onSelect}) => {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+item: {
+  paddingVertical: 15,
+  borderBottomWidth: 1,
+  borderColor: 'lightgrey',
+},
+text: {
+  fontSize: 16,
+}
+});
 
 export default ModuleItem;
