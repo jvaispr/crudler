@@ -23,6 +23,7 @@ const ModuleItem = ({module, onSelect}) => {
   );
 }
 
+
 const styles = StyleSheet.create({item:{
   paddingVertical: 15,
   borderTopWidth: 1,
