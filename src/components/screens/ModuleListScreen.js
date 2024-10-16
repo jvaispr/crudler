@@ -1,4 +1,5 @@
 
+
 import {StyleSheet, ScrollView } from 'react-native';
 import Screen from '../layout/Screen';
 import ModuleItem from './ModuleItem';
@@ -17,7 +18,9 @@ const handleSelect = () => alert('Item Selected');
     <Screen>
       <ScrollView style = {styles.container}>
       {modules.map((module) => {
+
         return <ModuleItem module={module} onSelect={handleSelect}/>;
+
 
       })}
       </ScrollView>
@@ -28,6 +31,7 @@ const handleSelect = () => alert('Item Selected');
 
 const styles = StyleSheet.create({
 container:{},
+
 
 });
 

@@ -2,6 +2,7 @@
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 
+
 const ModuleItem = ({module, onSelect}) => {
 // Initializations ---------------------
 // State -------------------------------
@@ -9,6 +10,7 @@ const ModuleItem = ({module, onSelect}) => {
 // View --------------------------------
 
   return (
+
     <Pressable key={module.ModuleCode} onPress={onSelect}>
     <View style={styles.item}>
       <Text style={styles.text}>
@@ -30,5 +32,6 @@ text:{
   fontsize: 16,
 },
 });
+
 
 export default ModuleItem;
