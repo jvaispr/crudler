@@ -2,8 +2,9 @@
 import { StyleSheet, Text } from 'react-native';
 import Screen from '../layout/Screen';
 
-const ModuleViewScreen = () => {
+const ModuleViewScreen = ({naviagtion, route}) => {
 // Initializations ---------------------
+const {module, onDelete} = route.params;
 // State -------------------------------
 // Handlers ----------------------------
 // View --------------------------------
