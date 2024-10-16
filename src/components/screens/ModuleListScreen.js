@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import Screen from '../layout/Screen';
 import ModuleList from '../entity/modules/ModuleList.js';
 
+
 import initialModules from '../../data/modules.js';
 
 const ModuleListScreen = () => {
@@ -15,8 +16,10 @@ const handleSelect = (module) => alert(`Item ${module.ModuleCode} Selected`);
 // View --------------------------------
   return (
     <Screen>
+
       <ModuleList modules={modules} onSelect={handleSelect}/>
     </Screen>
+  
     
   );
 };
