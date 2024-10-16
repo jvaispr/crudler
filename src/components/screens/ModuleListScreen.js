@@ -20,23 +20,15 @@ const handleDelete = (module) =>
 // View --------------------------------
   return (
     <Screen>
-<<<<<<< Updated upstream
-
-      <ModuleList modules={modules} onSelect={handleSelect}/>
-=======
       <RenderCount />
       <ModuleList modules={modules} onSelect={handleDelete}/>
->>>>>>> Stashed changes
     </Screen>
   
     
   );
 };
 
-const styles = StyleSheet.create({
-container:{},
-
-});
+const styles = StyleSheet.create({});
 
 export default ModuleListScreen;
 
