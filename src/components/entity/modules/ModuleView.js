@@ -8,7 +8,6 @@ const ModuleView = ({module}) => {
 // State -------------------------------
 // Handlers ----------------------------
 // View --------------------------------
-
   return (
     <View style={styles.container}>
 
@@ -19,8 +18,10 @@ const ModuleView = ({module}) => {
         {module.ModuleCode} {module.ModuleName}
         </Text>
       <Text style={styles.text}> Level {module.ModuleLevel} </Text>
-      <Text style={styles.text}>
-        {module.ModuleLeaderName} <Text style={styles.dimText}>(Module Leader)</Text>
+
+      <Text style={styles.text}> {module.ModuleLeaderName} 
+        <Text style={styles.dimText}>(Module Leader)</Text>
+
         </Text>
         </View>
         </View>
