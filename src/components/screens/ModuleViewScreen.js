@@ -3,7 +3,7 @@ import Screen from '../layout/Screen';
 import ModuleView from '../entity/modules/ModuleView';
 
 
-const ModuleViewScreen = ({ navigate, route}) => {
+const ModuleViewScreen = ({ navigation, route}) => {
 // Initializations ---------------------
 const {module} = route.params;
 // State -------------------------------
