@@ -4,6 +4,7 @@ import ModuleView from '../entity/modules/ModuleView';
 
 
 const ModuleViewScreen = ({ navigation, route}) => {
+
 // Initializations ---------------------
 const {module} = route.params;
 // State -------------------------------
