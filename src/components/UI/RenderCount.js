@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { StyleSheet, Text } from'react-native';
 
 
-const RenderCount = ({ backgroundColor = 'dodgerblue', fontcolor = 'white' }) => {
+const RenderCount = ({ backgroundColor = 'dodgerblue', fontColor = 'white' }) => {
 // Initialisations -------------
 // State -----------------------
 const renderCount = useRef(0);
