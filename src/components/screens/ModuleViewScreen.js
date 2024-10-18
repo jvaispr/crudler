@@ -6,14 +6,14 @@ import ModuleView from '../entity/modules/ModuleView';
 const ModuleViewScreen = ({ navigation, route}) => {
 
 // Initializations ---------------------
-const {module} = route.params;
+const {module, onDelete} = route.params;
 // State -------------------------------
 // Handlers ----------------------------
 // View --------------------------------
 
   return (
     <Screen>
-      <ModuleView module={module} />
+      <ModuleView module={module} onDelete={onDelete} />
     </Screen>
   );
 };
