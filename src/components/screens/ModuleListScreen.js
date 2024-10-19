@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { LogBox, StyleSheet } from 'react-native';
 import Screen from '../layout/Screen';
+import Icons from '../UI/Icons.js';
+import {Button, ButtonTray} from '../UI/button.js';
 import ModuleList from '../entity/modules/ModuleList';
 //import RenderCount from '../UI/RenderCount.js';
 
@@ -17,6 +19,8 @@ const[modules, setModules] = useState(initialModules);
 // Handlers ----------------------------
 const handleDelete = (module) => 
   setModules( modules.filter((item) =>  item.ModuleID !== module.ModuleID));
+
+  const handleAdd = (module) => setModules( [...modules, modules]);
   
   const onDelete = (module) => {
     handleDelete(module);
@@ -24,14 +28,23 @@ const handleDelete = (module) =>
 
   };
 
+  const onAdd = (module) => {
+    handleAdd(module);
+    navigation.goBack();
 
-const handleSelect = (module) => 
-  navigation.navigate('ModuleViewScreen', { module, onDelete });
+  };
+
+
+const gotoViewScreen = (module) => navigation.navigate('ModuleViewScreen', { module, onDelete });
+const gotoAddScreen = () => navigation.navigate('ModuleAddScreen', {onAdd})
 
 // View --------------------------------
   return (
     <Screen>
-      <ModuleList modules={modules} onSelect={handleSelect}/>
+      <ButtonTray>
+        <Button label="Add" icon={<Icons.Add/>} onClick={gotoAddScreen}/>
+         </ButtonTray>
+      <ModuleList modules={modules} onSelect={gotoViewScreen}/>
     </Screen>
   
     
